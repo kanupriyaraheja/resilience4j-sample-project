@@ -1,0 +1,9 @@
+resilience4j.circuitbreaker:
+  backends:
+    default:
+      ringBufferSizeInClosedState: 100
+      ringBufferSizeInHalfOpenState: 10
+      failureRateThreshold: 40
+      registerHealthIndicator: true
+      recordExceptions:
+        - org.springframework.web.client.HttpServerErrorException
